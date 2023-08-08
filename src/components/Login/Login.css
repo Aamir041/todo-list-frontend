@@ -9,6 +9,7 @@
 .login h1{
     font-weight: 400;
     font-size: 200%;
+    color: white;
 }
 
 .login-form{
@@ -25,7 +26,7 @@
     display: flex;
     flex-direction: column;
     padding: 1rem ;
-    width: 20rem;
+    width: 40%;
     background-color: #eee;
     border-radius: 20px;
 }
@@ -53,13 +54,21 @@
     cursor: pointer;
 }
 
-.signup-option{
-    width: 20rem;
-    text-align: right;
-    font-size: 90%;
-}
 
+.signup-option{
+    /* width: 20rem; */
+    /* text-align: right; */
+    font-size: 120%;
+
+    color: white;
+}
 @media screen and (max-width: 480px) {
+
+    .login-feild{
+        width: 80%;
+    }
+    
+
     .login h1{
         font-size: 170%;
     }    

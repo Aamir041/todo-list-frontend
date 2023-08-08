@@ -1,0 +1,86 @@
+.signup{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+.signup h1{
+    color: white;
+    font-weight: 400;
+    font-size: 200%;
+}
+
+.signup-form{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin: 1rem 0rem;
+}
+
+.signup-feild{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem ;
+    width: 30rem;
+    background-color: #eee;
+    border-radius: 20px;
+}
+
+.signup-feild label{
+    font-size: 90%;
+}
+
+.signup-feild input{
+    border: none;
+    outline: none;
+    font-size: 110%;
+    background-color: #eee;
+    margin: 0.25rem 0rem;
+    border-bottom: solid 2px black ;
+}
+
+.signup-button{
+    padding: 0.5rem 2rem;
+    border: none;
+    outline: none;
+    background-color: #FF805D;
+    font-size: 120%;
+    border-radius: 20px;
+    cursor: pointer;
+}
+/* 
+.signup-option{
+    width: 20rem;
+    text-align: right;
+    font-size: 90%;
+} */
+
+.signup-error{
+    position: absolute;
+    background-color: #DC3545;
+    color: white;
+    width: 15rem;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    top: 10%;
+    left: 20%;
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 480px) {
+
+    .signup-feild{
+        width: 80%;
+    }
+    
+
+    .signup h1{
+        font-size: 170%;
+    }    
+}

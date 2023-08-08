@@ -1,0 +1,40 @@
+.add-task-form{
+    margin: 2rem;
+    display: flex;
+    width: 70%;
+    background-color: white;
+    padding:  0 0.5rem;
+    border-radius: 8px;
+}
+
+.addtask-container{
+    width: 99%;;
+    display: flex;
+    
+}
+
+.addtask-container ::placeholder{
+    color: black;
+}
+
+.addtask-container input{
+    font-size: 125%;
+    background-color: white;
+    outline: none;
+    border: none;
+    width: 93%;
+    padding: 1%;
+}
+
+.addtask-button{
+    color: black;
+    background-color: white;
+    font-size: 300%;
+    outline: none;
+    border: none;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+
+

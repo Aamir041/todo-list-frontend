@@ -1,0 +1,24 @@
+.list {
+    font-family: sans-serif;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    color: white;
+}
+
+.list-profile{
+    margin: 1rem;
+    font-size: 120%;
+    color: white;
+    text-transform: uppercase;
+  }
+  
+.no-tasks {
+    font-size: 1.5rem;
+    color: white;
+    background-color: #e74255d6;
+    padding: 1rem;
+    border-radius: 8px;
+}

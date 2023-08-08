@@ -29,10 +29,9 @@ const Login = () => {
                 const responseData = response.data;
 
                 if(responseData.status === "success"){
-                    navigate("/lists");
+                    navigate("/lists",{state:{user:usn}});
                 }
                 else{
-                    // setInvalid(true);
                     console.log("Invaid info!");
                 }
 
@@ -61,9 +60,9 @@ const Login = () => {
                     <input onChange={(e) => setPwd(e.target.value)} type="password" />
                 </div>
                 
-                <p className="signup-option">
-                    <Link exact to="signup"> Create An Account</Link>
-                </p>
+                
+                    <Link className="signup-option" exact to="signup"> Create An Account</Link>
+                
                 
                 <button type="submit" onClick={handleSubmit} className="login-button">
                     Login
