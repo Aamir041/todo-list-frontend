@@ -27,8 +27,6 @@ const List = () => {
         try{
             const response = await axios.post("http://localhost/todolist/addtask.php",newTask);
             if(response.data.status == "success"){
-                console.log("added");
-                // setTasks((tasks) => [newTask,...tasks]);
                 setAddFlag(!addFlag);
             }
             else{
@@ -38,19 +36,40 @@ const List = () => {
         catch(error){
             console.log(error);
         }
-    } 
+    }
 
-    const deleteTask = async(id) => {
+
+
+    const deleteTask = async(task_id) => {
         try{
-            console.log(id);
-            const response = await axios.delete("http://localhost/todolist/deletetask.php",{"id":id});
+            // console.log(task_id);
+            const response = await axios.delete(`http://localhost/todolist/deletetask.php?id=${task_id}`);
 
             if(response.data.status === "success"){
-                console.log("deleted");
-                setAddFlag(!addFlag);
+                getTask();
             }
             else{
-                console.log(response?.data?.message);
+                console.log(response.data);
+            }
+        }
+        catch(error){
+            console.log(error);
+        }
+    }
+
+    const editTask = async (id,newTask) =>{
+        let editData = {
+            "id":id,
+            "newTask":newTask
+        }
+        try{
+
+            let response = await axios.put("http://localhost/todolist/edittask.php",editData);
+            if(response.data.status === "success"){
+                getTask();
+            }
+            else{
+                console.log(response.data);
             }
         }
         catch(error){
@@ -74,7 +93,11 @@ const List = () => {
             {
                 tasks.length > 0 
                 ?
-                tasks.map((e) => <TaskList deleteTask={deleteTask} task={e} />)
+                tasks.map((e) => {
+                    
+                    return <TaskList key={e.id} deleteTask={deleteTask} task={e} editTask={editTask} />
+
+                })
                 :
                 <div className="no-tasks">No task</div>
 

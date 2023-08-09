@@ -1,0 +1,56 @@
+.edit-task{
+    position:absolute;
+    backdrop-filter: blur(2px);
+    background-color: rgba(128, 128, 128, 0.425);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.edit-task-close-bttn{
+    position: absolute;
+    top: 0;
+    right:0;
+    margin: 2rem;
+    padding: 0.5rem 0.7rem;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    background-color: #e74255d6;
+    color: white;
+    border-radius: 8px;
+}
+
+.edit-task-feilds{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: none;
+}
+
+.edit-task-input{
+    margin: 10rem auto 2rem auto;
+    font-size: 120%;
+    
+    background-color: white;
+    outline: none;
+    border: none;
+    width: 50%;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.edit-task-confirm{
+    width: max-content;
+    padding: 0.3rem 0.5rem;
+    margin: auto;
+    outline: none;
+    border: none;
+    font-size: 1.35rem;
+    background-color: #1DB45A;
+    border-radius: 8px;
+    color: white;
+}
